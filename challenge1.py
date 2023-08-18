@@ -6,10 +6,14 @@ def time(hour,min,period):
     new_hour = hour+12 
     new_min =min+00
     #if statement to check whether its' noon or midnight
-    if hour == 12 and min == 00:
-        return (f"{hour}{min}0 {period}")
+    if hour == 12 and period == "am":
+        return '0000hrs'
+    elif hour == 12 and period =='pm':
+      return '1200hrs'
+    elif period == 'am': #vhecking if it's am
+       return    return f"{hour:02d}{minute:02d}"
     else:
-      return (f"{new_hour}{new_min} hrs")
+      return f"{new_hour}{new_min} hrs"
 
 
 print(time(12,00,"am"))
