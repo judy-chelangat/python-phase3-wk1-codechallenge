@@ -11,7 +11,7 @@ def time(hour,min,period):
     elif hour == 12 and period =='pm':
       return '1200hrs'
     elif period == 'am': #vhecking if it's am
-       return    return f"{hour:02d}{minute:02d}"
+        return f"{hour:02d}{min:02d}"
     else:
       return f"{new_hour}{new_min} hrs"
 
