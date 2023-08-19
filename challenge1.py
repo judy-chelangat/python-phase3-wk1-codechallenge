@@ -10,7 +10,7 @@ def time(hour,min,period):
         return '0000hrs'
     elif hour == 12 and period =='pm':
       return '1200hrs'
-    elif period == 'am': #vhecking if it's am
+    elif period == 'am': #checking if it's am
         return f"{hour:02d}{min:02d}"
     else:
       return f"{new_hour}{new_min} hrs"
