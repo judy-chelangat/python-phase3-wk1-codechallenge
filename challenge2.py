@@ -3,16 +3,17 @@
  #positive numbers (greater than zero), and False - otherwise.
 
 def number_checker(a,b,c):
-    if a>0 and b>0:
-        return 'True'
-    elif a>0 and c>0:
-        return 'True'
-    elif b>0 and c>0:
-        return 'True'
-    elif b>0 and a>0:
-        return 'True'
+    if a>0 and b>0 and c>0:
+        return False
+    elif (a>0 and b>0) or (a>0 and c>0) or (b>0 and c>0):
+        return True
     else:
-        return 'False'
+        return False
     
     
-print(number_checker(2,4,-5))
+print(number_checker(2, 4, -3))
+print(number_checker(-4, 6, 8))
+print(number_checker(4, -6, 9))
+print(number_checker(-4, 6, 0))
+print(number_checker(4, 6, 10) )
+print(number_checker(-14, -3, -4))
