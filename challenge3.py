@@ -7,12 +7,16 @@ def highest_value(string):
     max_value=0  #value to keep track of max value
     consonants ='bcdfghjklmnpqrstvwxyz'
     number_value =0 
-    for letter in string:
+    for letter in string: #looping through each letter of the string
         if letter in consonants: #checking if the letters are in the consonants
-         number_value += ord(letter) - ord('a') + 1
+         number_value += ord(letter) - ord('a') + 1 #calculating the consonant value
         if number_value > max_value:
                 max_value = number_value
         else:
             number_value =0
 
-            return number_value
+            return max_value
+        
+        
+
+print(highest_value("zodiacs"))
